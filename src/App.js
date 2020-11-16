@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './Componets/Header'
 import India from './Componets/India'
 import World from './Componets/World'
+import Kerala from './Componets/Kerala'
 
 class App extends React.Component {
   constructor() {
@@ -18,7 +19,10 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route exact path="/">
-              <India />
+              <Kerala />
+            </Route>
+            <Route exact path="/kerala">
+              <Kerala />
             </Route>
             <Route exact path="/india">
               <India />
