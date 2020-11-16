@@ -47,7 +47,7 @@ export default class StateData extends React.Component {
                                     <Card>
                                         <Card.Header>
                                             <Accordion.Toggle as={Button} variant="" eventKey={key}>
-                                                {item}
+                                                <h6>{item}</h6>
                                             </Accordion.Toggle>
                                             <div className="row float-right">
                                                 <span className="col-lg col-md col-sm-12 float-right btn btn-dark m-2">Total:{totalConfirmed}</span>
