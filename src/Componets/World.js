@@ -19,35 +19,31 @@ export default class World extends React.Component {
 
     render() {
         return (
-            <div className="row">
-                <div className="col-md-12">
-                    <table className="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>Total Cases</th>
-                                <th>Active Cases</th>
-                                <th>Recovered</th>
-                                <th>Deaths</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                this.state.data.map((item, key) => {
-                                    return (
-                                        <tr>
-                                            <td><img src={item.countryInfo.flag} className="mr-1" style={{width:"1.5rem"}}/>
-                                                {item.country}</td>
-                                            <td>{item.cases}</td>
-                                            <td>{item.active}</td>
-                                            <td>{item.recovered}</td>
-                                            <td>{item.deaths}</td>
-                                        </tr>
-                                    )
-                                })
-                            }
-                        </tbody>
-                    </table>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <table className="table table-bordered table-striped" >
+                            <tbody>
+                                {
+                                    this.state.data.map((item, key) => {
+                                        return (
+                                            <tr>
+                                                <th><img src={item.countryInfo.flag} className="mr-1" style={{ width: "1.5rem" }} />
+                                                    {item.country}
+                                                    <div className="row float-right">
+                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-dark m-2">Total:{item.cases}</span>
+                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-dark m-2">Active:{item.active}</span>
+                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-dark m-2">Recovered:{item.recovered}</span>
+                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-dark m-2">Deaths:{item.deaths}</span>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        )
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         )

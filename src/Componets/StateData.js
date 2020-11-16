@@ -49,39 +49,43 @@ export default class StateData extends React.Component {
                                             <Accordion.Toggle as={Button} variant="" eventKey={key}>
                                                 {item}
                                             </Accordion.Toggle>
-                                            <span className="float-right btn btn-dark mr-2">Total:{totalConfirmed}</span>
-                                            <span className="float-right btn btn-dark mr-2">Active:{totalActive}</span>
-                                            <span className="float-right btn btn-dark mr-2">Recovered:{totalRecovered}</span>
-                                            <span className="float-right btn btn-dark mr-2">Deaths:{totalDeaths}</span>
+                                            <div className="row float-right">
+                                                <span className="col-lg col-md col-sm-12 float-right btn btn-dark m-2">Total:{totalConfirmed}</span>
+                                                <span className="col-lg col-md col-sm-12 float-right btn btn-dark m-2">Active:{totalActive}</span>
+                                                <span className="col-lg col-md col-sm-12 float-right btn btn-dark m-2">Recovered:{totalRecovered}</span>
+                                                <span className="col-lg col-md col-sm-12 float-right btn btn-dark m-2">Deaths:{totalDeaths}</span>
+                                            </div>
                                         </Card.Header>
                                         <Accordion.Collapse eventKey={key}>
                                             <Card.Body>
-                                                <table className="table table-bordered table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>District</th>
-                                                            <th>Confirmed Cases</th>
-                                                            <th>Active</th>
-                                                            <th>Recovered</th>
-                                                            <th>Deaths</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        {
-                                                            districtList.map((item, key) => {
-                                                                return (
-                                                                    <tr>
-                                                                        <td>{item.districtName}</td>
-                                                                        <td>{item.confirmed}</td>
-                                                                        <td>{item.active}</td>
-                                                                        <td>{item.recovered}</td>
-                                                                        <td>{item.deceased}</td>
-                                                                    </tr>
-                                                                )
-                                                            })
-                                                        }
-                                                    </tbody>
-                                                </table>
+                                                <div className="table-responsive-md">
+                                                    <table className="table table-bordered table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>District</th>
+                                                                <th>Confirmed Cases</th>
+                                                                <th>Active</th>
+                                                                <th>Recovered</th>
+                                                                <th>Deaths</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {
+                                                                districtList.map((item, key) => {
+                                                                    return (
+                                                                        <tr>
+                                                                            <td>{item.districtName}</td>
+                                                                            <td>{item.confirmed}</td>
+                                                                            <td>{item.active}</td>
+                                                                            <td>{item.recovered}</td>
+                                                                            <td>{item.deceased}</td>
+                                                                        </tr>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
