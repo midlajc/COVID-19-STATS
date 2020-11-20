@@ -19,15 +19,15 @@ class App extends React.Component {
         <Router>
           <Header />
           <Switch>
-            <Route exact path="/">
-              <India />
-            </Route>
             {/* <Route exact path="/">
+              <India />
+            </Route> */}
+            <Route exact path="/">
               <Kerala />
             </Route>
             <Route exact path="/kerala">
               <Kerala />
-            </Route> */}
+            </Route>
             <Route path="/india">
               <India />
             </Route>
