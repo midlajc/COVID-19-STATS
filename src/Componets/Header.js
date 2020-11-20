@@ -11,7 +11,7 @@ export default class Header extends React.Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Link className="nav-link" to="/kerala">Kerala</Link>
+                        <Link className="nav-link btn" to="/kerala">Kerala</Link>
                         <Link className="nav-link btn" to="/india">India</Link>
                         <Link className="nav-link btn" to="/world">World</Link>
                     </Nav>

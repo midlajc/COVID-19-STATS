@@ -38,12 +38,12 @@ export default class India extends React.Component {
                             </Card>
                         </div>
                         <div className="col-md-4 col-sm-6 col-xl-3 p-2">
-                            <Card className="badge badge-warning" style={{ width: '15.23rem' }}>
+                            <Card className="badge badge-danger" style={{ width: '15.23rem' }}>
                                 <Card.Body className="text-center">
                                     <Card.Title>ACTIVE CASES</Card.Title>
                                     <h3>{this.state.indiaData.active}</h3>
                                     <Card.Text>
-
+                                    <br></br>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -60,7 +60,7 @@ export default class India extends React.Component {
                             </Card>
                         </div>
                         <div className="col-md-4 col-sm-6 col-xl-3 p-2">
-                            <Card className="badge badge-danger" style={{ width: '15.23rem' }}>
+                            <Card className="badge badge-dark" style={{ width: '15.23rem' }}>
                                 <Card.Body className="text-center">
                                     <Card.Title>DEATHS</Card.Title>
                                     <h3>{this.state.indiaData.deaths}</h3>
