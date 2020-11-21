@@ -15,7 +15,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="">
+      <div className="bg-dark">
         <Router>
           <Header />
           <Switch>

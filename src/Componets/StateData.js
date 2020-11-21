@@ -22,7 +22,7 @@ export default class StateData extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-12">
-                    <Accordion>
+                    <Accordion className="bg-dark">
                         {
                             keys.map((item, key) => {
                                 let districts = this.state.stateData[item].districtData
@@ -44,7 +44,7 @@ export default class StateData extends React.Component {
                                     districtList.push(ob)
                                 }
                                 return (
-                                    <Card>
+                                    <Card  className="bg-secondary">
                                         <Card.Header>
                                             <Accordion.Toggle as={Button} variant="" eventKey={key}>
                                                 <h6>{item}</h6>

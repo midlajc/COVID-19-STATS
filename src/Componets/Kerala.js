@@ -40,11 +40,11 @@ export default class Kerala extends React.Component {
             }
             stateData.map((item, key) => {
                 total.active += item.active
+                return 0
             })
 
         })
         axios.get("https://api.covid19india.org/v4/data.json").then((response) => {
-            //console.log(response.data.KL);
             let tData = response.data.KL.total
             if (response.data.KL.delta) {
                 this.setState({ todayData: response.data.KL.delta })
@@ -61,7 +61,7 @@ export default class Kerala extends React.Component {
         return (
             <div className="row m-3">
                 <div className="col-md-12">
-                    <h3 className="text-center"><br></br>KERALA<br></br></h3>
+                    <h3 className="text-center text-light"><br></br>KERALA<br></br></h3>
                 </div>
                 <div className="col-md-12">
                     <div className="row text-center">
@@ -110,7 +110,7 @@ export default class Kerala extends React.Component {
                             </Card>
                         </div>
                         <div className="col-md-4 col-sm-6 col-xl-3 p-2 mx-auto">
-                            <Card className="badge badge-dark" style={{ width: '15.23rem' }}>
+                            <Card className="badge badge-secondary" style={{ width: '15.23rem' }}>
                                 <Card.Body className="text-center">
                                     <Card.Title>TESTES</Card.Title>
                                     <h3>{this.state.totalData.tested}</h3>

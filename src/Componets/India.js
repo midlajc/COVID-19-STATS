@@ -60,7 +60,7 @@ export default class India extends React.Component {
                             </Card>
                         </div>
                         <div className="col-md-4 col-sm-6 col-xl-3 p-2">
-                            <Card className="badge badge-dark" style={{ width: '15.23rem' }}>
+                            <Card className="badge badge-secondary" style={{ width: '15.23rem' }}>
                                 <Card.Body className="text-center">
                                     <Card.Title>DEATHS</Card.Title>
                                     <h3>{this.state.indiaData.deaths}</h3>

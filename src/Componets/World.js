@@ -28,13 +28,14 @@ export default class World extends React.Component {
                                     this.state.data.map((item, key) => {
                                         return (
                                             <tr>
-                                                <th><img src={item.countryInfo.flag} className="mr-1" style={{ width: "1.5rem" }} />
-                                                    {item.country}
+                                                <th> 
+                                                    <h3 className="text-center text-light"><img src={item.countryInfo.flag} className="m-1" style={{ width: "2.5rem" }}  alt=""/>
+                                                    {item.country}</h3>
                                                     <div className="row float-right">
-                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-dark m-2">Total:{item.cases}</span>
-                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-dark m-2">Active:{item.active}</span>
-                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-dark m-2">Recovered:{item.recovered}</span>
-                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-dark m-2">Deaths:{item.deaths}</span>
+                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-secondary m-2">Total:{item.cases}</span>
+                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-secondary m-2">Active:{item.active}</span>
+                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-secondary m-2">Recovered:{item.recovered}</span>
+                                                        <span className="col-lg col-sm-12 col-md float-right btn btn-secondary m-2">Deaths:{item.deaths}</span>
                                                     </div>
                                                 </th>
                                             </tr>
